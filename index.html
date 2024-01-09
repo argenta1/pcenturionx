@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centurion X</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.stripe.com/v3/"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="order-status.html">Check Order Status</a></li>
+        <!-- Add more navigation items here if needed -->
+    </ul>
+</nav>
+    </header>
+    <main>
+        <section id="purchase-slider">
+            <h2>Purchase Followers</h2>
+            <!-- Order Form -->
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="link">Link to Page:</label>
+                    <input type="text" id="link" required>
+                </div>
+                <div class="form-group">
+                    <label for="follower-range">Number of Followers:</label>
+                    <input type="range" id="follower-range" min="50" max="10000" step="50" value="1000">
+                    <p>Amount: <span id="follower-amount">1000</span> Followers</p>
+                    <p>Total Cost: $<span id="total-cost">3</span></p>
+                </div>
+                <button type="submit">Purchase</button>
+            </form>
+        </section>
+        <!-- ... existing HTML elements ... -->
+
+<section id="order-status">
+    <h2>Your Order Status</h2>
+    <p>Order Number: <span id="order-number"></span></p>
+    <div id="progress-circle"></div> <!-- Placeholder for progress circle -->
+</section>
+
+<!-- ... remaining HTML ... -->
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Centurion X</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

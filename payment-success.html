@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success - Centurion X</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a styles.css -->
+</head>
+<body>
+    <header>
+        <!-- Your site's navigation header -->
+    </header>
+    <main>
+        <section id="payment-success">
+            <h1>Payment Successful</h1>
+            <p>Thank you for your purchase! Your order number is: <span id="order-number"></span></p>
+            <!-- You can add more details here if needed -->
+        </section>
+    </main>
+    <footer>
+        <!-- Your site's footer -->
+    </footer>
+
+    <script>
+        // Script to extract the order number from URL parameters
+        document.addEventListener('DOMContentLoaded', function() {
+            var params = new URLSearchParams(window.location.search);
+            var orderNumber = params.get('order'); // Assuming the parameter name is 'order'
+            document.getElementById('order-number').textContent = orderNumber;
+        });
+    </script>
+</body>
+</html>
